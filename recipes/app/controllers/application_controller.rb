@@ -12,6 +12,17 @@ class ApplicationController < Sinatra::Base
   get '/' do 
     "Hello World"
   end 
+  
+  post '/recipes/new' do
+    @recipe = Recipe.new 
+    @recipe.title = params[:title]
+    @recipe.content = params[:content]
+    if @recipe.save 
+      redirect '/recipes'
+    else 
+      erb :"recipes/new.html"
+    end 
+  end
 
   helpers do 
     def logged_in?

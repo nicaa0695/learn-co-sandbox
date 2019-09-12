@@ -9,6 +9,7 @@ class RecipesController < ApplicationController
       redirect "/login" 
     else 
       "A new recipe form"
+      erb :'/recipes/new.html'
     end 
   end 
   

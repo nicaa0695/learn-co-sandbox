@@ -8,9 +8,15 @@ class ApplicationController < Sinatra::Base
     enable :sessions 
     set :session_secret, "secret"
   end
-
-  get "/" do
+  
+  get '/' do 
     "Hello World"
-  end
+  end 
+
+  helpers do 
+    def logged_in?
+      !!session[:email]
+    end 
+  end 
 
 end

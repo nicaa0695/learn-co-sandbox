@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   end 
   
   get '/recipes/new' do 
-    if !session[:email]
+    if !logged_in?
       redirect "/login" 
     else 
       "A new recipe form"
@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
   end 
   
   get '/recipes/:id/edit' do
-    if !session[:email]
+    if !logged_in?
       redirect "/login" 
     else 
       "An edit recipe form"

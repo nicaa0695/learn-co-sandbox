@@ -16,15 +16,8 @@ class RecipesController < ApplicationController
     if !logged_in?
       redirect "/login" 
     else 
-      recipe = Recipe.find(params[:id])
-      if recipe.user_id == current_user.id
-        "An edit recipe form #{current_user.id} is editing #{recipe.id}"
-      else 
-        redirect '/recipes'
+      recipe = current_user.recipes.find_by(params[:id])
+      "An edit recipe form #{current_user.id} is editing #{recipe.id}"
     end 
   end 
-  
-  
-  
-  
 end 

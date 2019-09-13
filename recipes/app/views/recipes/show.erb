@@ -1,0 +1,10 @@
+Show Recipe
+
+ <%= @recipe.content %>
+
+ <a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a>
+
+ <form method="post" action="/recipe/<%= @recipe.id %>">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Recipe" id="Delete Recipe">
+</form>

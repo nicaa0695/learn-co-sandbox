@@ -4,7 +4,8 @@
 <br>
 
 <ul>
-    <% Recipe.all.each do |recipe| %>
+    <% @current_user.recipes.each do |recipe| %>
+    
   <ul>
     <li><%= recipe.content %></li>
   </ul>

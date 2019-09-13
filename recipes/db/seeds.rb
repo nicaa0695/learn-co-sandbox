@@ -1,7 +1,7 @@
 require 'faker'
 include Faker
 
-20.times do 
+50.times do 
   user = User.create(
     email: Faker::Internet.email,
     password: Faker::Internet.password(min_length: 8)
@@ -9,9 +9,9 @@ include Faker
   user.save!
 end 
 
-20.times do 
+50.times do 
   Recipe.create(
-    title: Faker::Lorem.words(4),
-    content: Faker::Lorem.paragraph(2)
+    title: Faker::Food.dish,
+    content: Faker::Food.description
   )
 end 

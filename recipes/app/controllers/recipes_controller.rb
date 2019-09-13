@@ -49,7 +49,7 @@ class RecipesController < ApplicationController
     else
     @recipe = Recipe.find(params[:id])
 
-     erb :"/recipes/show"
+     erb :"/recipes/index"
     end
   end
   

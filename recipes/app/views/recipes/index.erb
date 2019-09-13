@@ -5,14 +5,12 @@
 <br>
 
  <% Recipe.all.each do |recipe| %>
-<ol>
+<ul>
   <br>
   <br>
+  <li><%= recipe.id %><a/></li>
   <a href <h5><%= recipe.title %></h5></a>
-  
   <li> <%= recipe.content %></li>
-  
-  
-</ol>
+</ul>
 <% end %>
 

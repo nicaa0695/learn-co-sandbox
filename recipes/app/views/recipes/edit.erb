@@ -1,5 +1,8 @@
  <form action='/recipes/<%= @recipe.id %>' method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
+    <%= @current_user.email %>
+    <br> 
+    <h3>Recipe: <%= @recipe.id %> </h3>
     <h3>Content:</h3>
     <input type="text" name="content" value="<%= @recipe.content %>" size="150"><br>
     <br>

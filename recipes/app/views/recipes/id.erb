@@ -1,0 +1,10 @@
+
+<% Recipe.all.each do |recipe| %>
+<ul>
+  <br>
+  <br>
+  <li><%= recipe.id %><a/></li>
+  <li><%= recipe.title %></li>
+  <li> <%= recipe.content %></li>
+</ul>
+<% end %>

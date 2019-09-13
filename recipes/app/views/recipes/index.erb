@@ -1,14 +1,12 @@
-<h1>Welcome, <%= @current_user.email %>!</h1>
-<br> 
-<h3>Here's a list of all your recipes!</h3>
+<h3>Welcome, <%= @current_user.email %>!</h3>
+<br>
+<h1>All Recipes</h1>
+<br>
 <br>
 
+ <% Recipe.all.each do |recipe| %>
 <ul>
-    <% @current_user.recipes.each do |recipe| %>
-    
-  <ul>
-    <li><%= recipe.content %></li>
-  </ul>
-<% end %>
+  <li><%= recipe.content %></li>
 </ul>
+<% end %>
 

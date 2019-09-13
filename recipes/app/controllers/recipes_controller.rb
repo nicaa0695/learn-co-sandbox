@@ -1,8 +1,14 @@
 class RecipesController < ApplicationController 
   
   get '/recipes' do 
-    "A list of recipes!"
-  end 
+     if !logged_in?
+      redirect to "/login"
+    else
+      @user = User.find_by(session[:user_id])
+    erb :'/recipes/index'
+  end
+  end
+   
   
   get '/recipes/new' do 
     if !logged_in?
@@ -24,4 +30,6 @@ class RecipesController < ApplicationController
     end 
     end 
   end 
+  
+  
 end 

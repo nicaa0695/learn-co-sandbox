@@ -1,10 +1,10 @@
-<h1>Updated Recipe:</h1>
+<h1><%= @recipe.title %></h1>
 
  <h3><%= @recipe.content %></h3>
 
  <a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a>
  <br>
- <a href="/index">All Recipes</a> 
+ <a href="/recipes/index">All Recipes</a> 
  <br>
  <a href="/logout">Logout</a>
 

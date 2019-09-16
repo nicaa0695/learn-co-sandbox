@@ -11,7 +11,8 @@
   <br>
   <br>
   <li><%= recipe.id %><a/></li>
-  <a href="/recipes/id"</a> <h5><%= recipe.title %></h5></a>
+  
+  <a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a>
   <li> <%= recipe.content %></li>
 </ul>
 <% end %>

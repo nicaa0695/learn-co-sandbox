@@ -1,7 +1,0 @@
-<h1>Welcome, <%= @current_user.email %>!</h1>
-
- <% @current_user.recipes.each do |recipe| %>
-<ul>
-  <li><%= recipe.content %></li>
-</ul>
-<% end %>
